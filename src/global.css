@@ -1,0 +1,107 @@
+@font-face {
+  font-family: 'Ubuntu';
+  font-weight: 700;
+  src: url('./assets/fonts/Ubuntu-Bold.ttf');
+}
+@font-face {
+  font-family: 'Ubuntu';
+  font-weight: 500;
+  src: url('./assets/fonts/Ubuntu-Medium.ttf');
+}
+@font-face {
+  font-family: 'Ubuntu';
+  font-weight: 400;
+  src: url('./assets/fonts/Ubuntu-Regular.ttf');
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+figure,
+blockquote {
+  margin: 0;
+}
+
+ul,
+ol {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+  max-width: 100%;
+}
+
+:root {
+  --purple: hsl(243, 100%, 62%);
+  --purple-200: hsl(229, 24%, 87%);
+
+  --blue-650: hsl(213, 96%, 18%);
+  --blue-300: hsl(228, 100%, 84%);
+  --blue-200: hsl(206, 94%, 87%);
+  --blue-100: hsl(218, 100%, 97%);
+  --blue-50: hsl(231, 100%, 99%);
+
+  --red: hsl(354, 84%, 57%);
+  --gray: hsl(231, 11%, 63%);
+}
+
+.step-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+
+  header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+
+    h2 {
+      color: var(--blue-650);
+      font-weight: 700;
+      font-size: 2rem;
+    }
+
+    p {
+      color: var(--gray);
+      font-weight: 400;
+    }
+  }
+}
