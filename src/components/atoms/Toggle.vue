@@ -7,7 +7,6 @@ const props = defineProps<Props>()
 
 const model = defineModel({ type: Boolean, default: false });
 const handleChange = (event) => {
-  console.log('handle inside')
 };
 </script>
 
@@ -59,7 +58,7 @@ const handleChange = (event) => {
   height: 1rem;
   background-color: white;
   border-radius: 9999px;
-  transition: left 0.3s;
+  transition: left 0.15s ease-in-out;
   margin: 4px;
   inset-block: 0;
 }

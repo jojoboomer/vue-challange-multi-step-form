@@ -40,7 +40,7 @@ const props = withDefaults(defineProps<Props>(), {
   border: 2px solid transparent;
   font-weight: 500;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.2s ease-in-out;
 }
 
 /* size */

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useFormStore } from '@/store/form';
 import { useStepsStore } from '@/store/stepper';
-import { computed, ref } from 'vue';
+import { computed, ref, Transition } from 'vue';
 import FormCompleted from '../molecules/FormCompleted.vue';
 import FormFooter from '../molecules/FormFooter.vue';
 import StepAddOns from '../molecules/StepAddOns.vue';
@@ -49,7 +49,9 @@ const handleGoBack = () => {
 
 <template>
   <section class="form-content">
-    <component v-if="!formStore.submited" :is="currentStepComponent" ref="activeStepRef" />
+    <Transition name="fade" mode="out-in">
+      <component v-if="!formStore.submited" :is="currentStepComponent" ref="activeStepRef" />
+    </Transition>
     <FormFooter v-if="!formStore.submited" @go-next="handleGoNext" @go-back="handleGoBack"
       :can-go-back="!store.isFirstStep" :can-go-next="!store.isLastStep" />
     <FormCompleted v-if="formStore.submited" />
@@ -57,6 +59,16 @@ const handleGoBack = () => {
 </template>
 
 <style scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.25s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
 .form-content {
   background-color: white;
   display: flex;

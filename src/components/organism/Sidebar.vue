@@ -9,13 +9,17 @@ const handleClick = (index: number) => {
   if (index < store.currentStep)
     store.goToStep(index)
 }
+
+const isVisited = (idx: number) => {
+  return idx < store.currentStep
+}
 </script>
 
 <template>
   <aside class="form-sidebar">
     <div class=" stepper">
       <StepperItem v-for="step in STEPS" :index="step.id" :label="step.label" :active="step.id === store.currentStep"
-        @click="handleClick(step.id)" />
+        :visited="isVisited(step.id)" @click="handleClick(step.id)" />
     </div>
   </aside>
 </template>

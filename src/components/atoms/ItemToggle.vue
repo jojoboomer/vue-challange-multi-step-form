@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import CheckMark from '@/assets/images/icon-checkmark.svg?url';
+import CheckIcon from './CheckIcon.vue';
 
 interface Props {
   title: string
@@ -18,7 +18,7 @@ const toggleStatus = () => {
   <div class="addons-item" :class="{ 'is-checked': model }" @click="toggleStatus">
     <label class=" custom-checkbox">
       <input type="checkbox" v-model="model" @click.stop />
-      <img :src="CheckMark" alt="checkmarck-icon" v-if="model" class="check-icon" />
+      <CheckIcon v-if="model" class="check-icon" />
     </label>
     <div class="item-content">
       <p class="item-title">{{ props.title }}</p>
@@ -38,7 +38,7 @@ const toggleStatus = () => {
   border: 1px solid var(--gray-light, #eee);
   border-radius: 8px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.15s ease-in-out;
 }
 
 .addons-item .item-content {
@@ -99,7 +99,7 @@ const toggleStatus = () => {
   border-radius: 4px;
   background-color: transparent;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.15s ease-in-out;
 }
 
 .custom-checkbox input[type="checkbox"]:checked {

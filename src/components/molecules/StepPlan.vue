@@ -72,7 +72,7 @@ const isChecked = computed({
   gap: 1rem;
   border-radius: 5px;
   border: 1px solid var(--gray);
-  transition: all 0.1s ease-in-out;
+  transition: all 0.15s ease-in-out;
   padding: 1rem;
 }
 
@@ -109,7 +109,7 @@ const isChecked = computed({
 
 .toggle-section span {
   color: var(--gray);
-  transition: color 0.3s;
+  transition: color 0.15s;
 
 }
 
