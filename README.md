@@ -39,8 +39,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://vue-challange-stepper.netlify.app/)
-- Live Site URL: [Add live site URL here](https://github.com/jojoboomer/vue-challange-multi-step-form)
+- Solution URL: [Add solution URL here](https://github.com/jojoboomer/vue-challange-multi-step-form)
+- Live Site URL: [Add live site URL here](https://vue-challange-stepper.netlify.app/)
 
 ## My process
 
